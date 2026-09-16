@@ -11,7 +11,7 @@ const checkRoutes = require("./routes/checklogs");
 const dashboardRoutes = require("./routes/dashboard");
 
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
+app.use(cors());
 app.use(express.json({ limit: "5mb" }));
 
 app.get("/", (req, res) => res.json({ message: "Visitor Pass API is running" }));
