@@ -5,7 +5,7 @@ import axios from "axios";
 import {QRCodeCanvas} from "qrcode.react";
 import "./styles.css";
 
-const API="https://visitor-pass-backend-7vlt.onrender.com/api";
+const API="https://visitor-pass-backend-7v1t.onrender.com/api";
 const api=axios.create({baseURL:API});
 api.interceptors.request.use(c=>{const t=localStorage.getItem("token"); if(t)c.headers.Authorization=`Bearer ${t}`; return c;});
 
